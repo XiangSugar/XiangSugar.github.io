@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim">
-<meta property="og:updated_time" content="2018-04-28T05:10:04.367Z">
+<meta property="og:updated_time" content="2018-04-28T05:16:29.546Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无人船云服务器开发环境搭建">
 <meta name="twitter:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
@@ -206,19 +206,19 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python use_tornado.py</span><br></pre></td></tr></table></figure>
 <ul>
-<li>在浏览器地址栏中输入：<a href="http://localhost:8000，查看效果（如图则表示测试成功）：" target="_blank" rel="noopener">http://localhost:8000，查看效果（如图则表示测试成功）：</a></li>
+<li>在浏览器地址栏中输入：<code>http://localhost:8000</code>，查看效果（如图则表示测试成功）：</li>
 </ul>
 <p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim" alt="mark"></p>
 <h2 id="2-pymongo"><a href="#2-pymongo" class="headerlink" title="2. pymongo"></a>2. pymongo</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>pymongo 其实是一个 python 的第三方模块，所以安装有两种方式</p>
-<ol>
-<li><p>命令行环境中安装：</p>
+<ul>
+<li>命令行环境中安装：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; python -m pip install pymongo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>python 环境下安装：</p>
+<ul>
+<li>python 环境下安装：</li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; pip install pymongo</span><br></pre></td></tr></table></figure>
 <p>等待安装完成即可。</p>
-</li>
-</ol>
 <h3 id="2-2-使用（简单测试）"><a href="#2-2-使用（简单测试）" class="headerlink" title="2.2 使用（简单测试）"></a>2.2 使用（简单测试）</h3><p>参见下文的 4.3 即可。</p>
 <h2 id="3-MongoDB"><a href="#3-MongoDB" class="headerlink" title="3. MongoDB"></a>3. MongoDB</h2><h3 id="3-1-首先在-MongoDB官网-下载安装包-msi-文件，然后可视化安装"><a href="#3-1-首先在-MongoDB官网-下载安装包-msi-文件，然后可视化安装" class="headerlink" title="3.1 首先在 MongoDB官网 下载安装包(.msi)文件，然后可视化安装"></a>3.1 首先在 <a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">MongoDB官网</a> 下载安装包(<code>.msi</code>)文件，然后可视化安装</h3><p>下载完成后双击 <code>.msi</code> 文件，按提示进行安装即可。也可以自定义安装目录等。</p>
 <h3 id="3-2-创建数据目录"><a href="#3-2-创建数据目录" class="headerlink" title="3.2 创建数据目录"></a>3.2 创建数据目录</h3><p>MongoDB 将数据目录存储在 db 目录下。但是这个数据目录不会主动创建，我们在安装完成后需要创建它。请注意，数据目录应该放在根目录下（(如： C:\ 或者 D:\ 等)。</p>
@@ -269,22 +269,22 @@
 <li>输入表的名称（mytest）：</li>
 </ul>
 <p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim" alt="mark"></p>
-<h3 id="4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><a href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化" class="headerlink" title="4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"></a>4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</h3><ol>
+<h3 id="4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><a href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化" class="headerlink" title="4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"></a>4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</h3><ul>
 <li>首先定义一个 <code>MongoConn</code> 类：</li>
-</ol>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># myconn.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> traceback    </span><br><span class="line"></span><br><span class="line">MONGODB_CONFIG = &#123;</span><br><span class="line">    <span class="string">'host'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    <span class="string">'port'</span>: <span class="number">27017</span>,</span><br><span class="line">    <span class="string">'db_name'</span>: <span class="string">'test_1'</span>,</span><br><span class="line">    <span class="string">'username'</span>: <span class="keyword">None</span>,</span><br><span class="line">    <span class="string">'password'</span>: <span class="keyword">None</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MongoConn</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># connect db</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.conn = pymongo.MongoClient(MONGODB_CONFIG[<span class="string">'host'</span>], MONGODB_CONFIG[<span class="string">'port'</span>])</span><br><span class="line">            self.db = self.conn[MONGODB_CONFIG[<span class="string">'db_name'</span>]]  <span class="comment"># connect db</span></span><br><span class="line">            self.username=MONGODB_CONFIG[<span class="string">'username'</span>]</span><br><span class="line">            self.password=MONGODB_CONFIG[<span class="string">'password'</span>]           </span><br><span class="line">            <span class="keyword">if</span> self.username <span class="keyword">and</span> self.password:</span><br><span class="line">                self.connected = self.db.authenticate(self.username, self.password)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                self.connected = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">except</span> Exception:</span><br><span class="line">            print(traceback.format_exc())</span><br><span class="line">            print(<span class="string">'Connect Statics Database Fail.'</span>)</span><br><span class="line">            sys.exit(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>然后对 MongoDB 进行一些简单的操作（插入数据）</li>
-</ol>
+<ul>
+<li>然后对 MongoDB 进行一些简单的操作（插入数据、查询数据）</li>
+</ul>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># use_pymongo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> myconn <span class="keyword">import</span> MongoConn</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    my_conn = MongoConn()</span><br><span class="line">    datas = [</span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">1</span>, <span class="string">'data'</span>:<span class="number">12</span>&#125;,        </span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">2</span>, <span class="string">'data'</span>:<span class="number">22</span>&#125;,</span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">3</span>, <span class="string">'data'</span>:<span class="string">'cc'</span>&#125;      </span><br><span class="line">    ]  </span><br><span class="line">    <span class="comment">#插入数据，'mytest'是上文中创建的表名</span></span><br><span class="line">    my_conn.db[<span class="string">'mytest'</span>].insert(datas)</span><br><span class="line">    <span class="comment">#查询数据，'mytest'是上文中创建的表名</span></span><br><span class="line">    res=my_conn.db[<span class="string">'mytest'</span>].find(&#123;&#125;)</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> res:</span><br><span class="line">        print(k)</span><br></pre></td></tr></table></figure>
-<ol start="3">
+<ul>
 <li>在命令行中运行该程序：</li>
-</ol>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; python use_pymongo.py</span><br></pre></td></tr></table></figure>
-<ol start="4">
+<ul>
 <li>打开 Robomongo 查看情况，可以看到插入的数据值（此处为 json 格式显示，robomongo 里面有多种显示格式，点右上角按钮切换即可）。</li>
-</ol>
-<p>!<img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim" alt="mark"></p>
+</ul>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim" alt="mark"></p>
 
       
 
