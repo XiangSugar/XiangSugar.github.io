@@ -8,13 +8,13 @@
   <link rel="dns-prefetch" href="https://xiangsugar.github.io">
   <title>利用 Hexo 搭建 Github 静态博客 | Sugar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！） 1. 介绍1.1 HEXO 简介Hexo 是一个快速、简洁且高效的博客框架。">
+  <meta name="description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！）">
 <meta name="keywords" content="hexo,git,github,yilia,博客搭建">
 <meta property="og:type" content="article">
 <meta property="og:title" content="利用 Hexo 搭建 Github 静态博客">
 <meta property="og:url" content="https://xiangsugar.github.io/2018/04/28/利用-Hexo-搭建-Github-静态博客/index.html">
 <meta property="og:site_name" content="Sugar">
-<meta property="og:description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！） 1. 介绍1.1 HEXO 简介Hexo 是一个快速、简洁且高效的博客框架。">
+<meta property="og:description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！）">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/LCmLCCIg7b.png?imageslim">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/5m7K90HdHG.png?imageslim">
@@ -23,10 +23,10 @@
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/B9KK7eKbg8.png?imageslim">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/F1D44gjhle.png?imageslim">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/8JfGH4IIb1.png?imageslim">
-<meta property="og:updated_time" content="2018-04-28T10:58:08.490Z">
+<meta property="og:updated_time" content="2018-04-28T11:00:16.951Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="利用 Hexo 搭建 Github 静态博客">
-<meta name="twitter:description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！） 1. 介绍1.1 HEXO 简介Hexo 是一个快速、简洁且高效的博客框架。">
+<meta name="twitter:description" content="前言：前两天心血来潮捣鼓了一下如何利用HEXO 和 Github 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！）">
 <meta name="twitter:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/LCmLCCIg7b.png?imageslim">
   
     <link rel="alternative" href="/atom.xml" title="Sugar" type="application/atom+xml">
@@ -189,6 +189,7 @@
       
         <p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/LCmLCCIg7b.png?imageslim" alt="mark"></p>
 <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>前两天心血来潮捣鼓了一下如何利用<code>HEXO</code> 和 <code>Github</code> 来搭建静态博客，终于在倒腾了好久之后成功写了自己的第一篇博客并发布到自己的个人博客网站上面。抱着一种学习和分享的心态，我将自己经历的整个过程记录下来，在重新熟悉流程的同时也希望能够帮到需要的人。（虽然不见得有人会去看我的博客，不过还是心向往之，哈哈哈！）</p>
+<a id="more"></a>
 <h2 id="1-介绍"><a href="#1-介绍" class="headerlink" title="1. 介绍"></a>1. 介绍</h2><h3 id="1-1-HEXO-简介"><a href="#1-1-HEXO-简介" class="headerlink" title="1.1 HEXO 简介"></a>1.1 <code>HEXO</code> 简介</h3><p><code>Hexo</code> 是一个快速、简洁且高效的博客框架。<code>Hexo</code> 使用 <a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="noopener">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 <h3 id="1-2-Github-简介"><a href="#1-2-Github-简介" class="headerlink" title="1.2 Github 简介"></a>1.2 <code>Github</code> 简介</h3><p><code>gitHub</code>是一个面向<a href="https://baike.baidu.com/item/%E5%BC%80%E6%BA%90/20720669" target="_blank" rel="noopener">开源</a>及私有<a href="https://baike.baidu.com/item/%E8%BD%AF%E4%BB%B6/12053" target="_blank" rel="noopener">软件</a>项目的托管平台，因为只支持 <code>git</code> 作为唯一的版本库格式进行托管，故名 <code>gitHub</code>。</p>
 <p><code>gitHub</code> 于 2008 年 4 月 10 日正式上线，除了 <code>git</code> 代码仓库托管及基本的 <code>Web</code> 管理界面以外，还提供了订阅、讨论组、文本渲染、在线文件编辑器、协作图谱（报表）、代码片段分享（<code>Gist</code>）等功能。</p>
