@@ -6,29 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xiangsugar.github.io">
-  <title>无人船云服务器开发环境搭建 | Sugar</title>
+  <title>Tag: Robomongo | Sugar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
-<meta name="keywords" content="tornado,pymongo,MongoDB,Robomongo">
-<meta property="og:type" content="article">
-<meta property="og:title" content="无人船云服务器开发环境搭建">
-<meta property="og:url" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/index.html">
+  <meta name="description" content="I was young until I wasn&apos;t.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sugar">
+<meta property="og:url" content="https://xiangsugar.github.io/tags/Robomongo/index.html">
 <meta property="og:site_name" content="Sugar">
-<meta property="og:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
+<meta property="og:description" content="I was young until I wasn&apos;t.">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim">
-<meta property="og:updated_time" content="2018-04-28T04:39:26.130Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="无人船云服务器开发环境搭建">
-<meta name="twitter:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
-<meta name="twitter:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
+<meta name="twitter:title" content="Sugar">
+<meta name="twitter:description" content="I was young until I wasn&apos;t.">
   
     <link rel="alternative" href="/atom.xml" title="Sugar" type="application/atom+xml">
   
@@ -168,145 +157,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-我的第一篇博客" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      无人船云服务器开发环境搭建
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2018/04/27/我的第一篇博客/" class="archive-article-date">
+  	<time datetime="2018-04-27T06:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/04/27/我的第一篇博客/">无人船云服务器开发环境搭建</a>
     </h1>
   
 
-        
-        <a href="/2018/04/27/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2018-04-27T06:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 <code>Python</code> 、<code>tornado</code> 进行开发的，而数据库是采用 <code>MongoDB</code>，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很好的事，此外，如有不妥的地方还请各位大佬多拍拍砖。</p>
-<a id="more"></a>
-<h2 id="1-tornado"><a href="#1-tornado" class="headerlink" title="1. tornado"></a>1. tornado</h2><p>###1.1 安装</p>
-<p>运行命令行工具，输入指令直接安装：(前提是之前已经安装了 pip 包安装工具)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; pip install tornado</span><br></pre></td></tr></table></figure>
-<h3 id="1-2-使用（简单测试）"><a href="#1-2-使用（简单测试）" class="headerlink" title="1.2 使用（简单测试）"></a>1.2 使用（简单测试）</h3><ul>
-<li>编写一个很简单的测试代码，如下：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"><span class="comment"># use_tornado.py</span></span><br><span class="line"><span class="comment"># 导入该演示用例代码中必须的 tornado 的四个模块</span></span><br><span class="line"><span class="keyword">import</span> tornado.httpserver</span><br><span class="line"><span class="keyword">import</span> tornado.ioloop</span><br><span class="line"><span class="keyword">import</span> tornado.options</span><br><span class="line"><span class="keyword">import</span> tornado.web</span><br><span class="line"><span class="keyword">from</span> tornado.options <span class="keyword">import</span> define, options</span><br><span class="line"></span><br><span class="line"><span class="comment"># 用于从命令行中读取配置和解析命令</span></span><br><span class="line"><span class="comment"># 定义一个配置选项port，即端口</span></span><br><span class="line"><span class="comment"># defualt 表示默认值， help表示在帮助中显示的信息 </span></span><br><span class="line"><span class="comment"># type 表示该配置参数的数据类型，如果类型匹配错误会报错</span></span><br><span class="line">define(<span class="string">"port"</span>, default=<span class="number">8000</span>, help=<span class="string">"run on the given port"</span>, type=int)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 页面请求的Handler类，继承了Web的RequestHandler类</span></span><br><span class="line"><span class="comment"># 此处只有一个get方法，表示Http的Get请求</span></span><br><span class="line"><span class="comment"># 内建方法get_argument用来获取http页面的请求参数</span></span><br><span class="line"><span class="comment"># 内建方法write，将响应的内容写道页面中</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">IndexHandler</span><span class="params">(tornado.web.RequestHandler)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">get</span><span class="params">(self)</span>:</span></span><br><span class="line">        greeting = self.get_argument(<span class="string">'greeting'</span>, <span class="string">'Hello'</span>)</span><br><span class="line">        self.write(greeting + <span class="string">', tornado!'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    <span class="comment"># 从命令行中读取并解析配置参数</span></span><br><span class="line">    tornado.options.parse_command_line()</span><br><span class="line">    <span class="comment"># 创建一个tornado应用。andlers 是一个元组列表，其中每个元组的第一个元素是一个正则表达式，</span></span><br><span class="line">    <span class="comment"># 表示网址路由，如果其中包含捕获分组，则将匹配的内容送往 RequestHandler；</span></span><br><span class="line">    <span class="comment"># 第二个元素是所使用的 RequestHandler 类用来响应操作</span></span><br><span class="line">    app = tornado.web.Application(handlers=[(<span class="string">r"/"</span>, IndexHandler)])</span><br><span class="line">    <span class="comment"># 使用这个tornado 应用创建一个http服务器</span></span><br><span class="line">    http_server = tornado.httpserver.HTTPServer(app)</span><br><span class="line">    <span class="comment"># 设置 http 服务器的监听端口，命令行有传入端口则监听传入端口，没有则监听默认端口</span></span><br><span class="line">    http_server.listen(options.port)</span><br><span class="line">    <span class="comment"># 启动服务器</span></span><br><span class="line">    tornado.ioloop.IOLoop.instance().start()</span><br></pre></td></tr></table></figure>
-<ul>
-<li>然后运行该程序：</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python use_tornado.py</span><br></pre></td></tr></table></figure>
-<ul>
-<li>在浏览器地址栏中输入：<a href="http://localhost:8000，查看效果（如图则表示测试成功）：" target="_blank" rel="noopener">http://localhost:8000，查看效果（如图则表示测试成功）：</a></li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim" alt="">)</p>
-<h2 id="2-pymongo"><a href="#2-pymongo" class="headerlink" title="2. pymongo"></a>2. pymongo</h2><p>###2.1 安装</p>
-<p>pymongo 其实是一个 python 的第三方模块，所以安装有两种方式</p>
-<ol>
-<li><p>命令行环境中安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; python -m pip install pymongo</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>python 环境下安装：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; pip install pymongo</span><br></pre></td></tr></table></figure>
-<p>等待安装完成即可。</p>
-</li>
-</ol>
-<h3 id="2-2-使用（简单测试）"><a href="#2-2-使用（简单测试）" class="headerlink" title="2.2 使用（简单测试）"></a>2.2 使用（简单测试）</h3><p>参见下文的 4.3 即可。</p>
-<h2 id="3-MongoDB"><a href="#3-MongoDB" class="headerlink" title="3. MongoDB"></a>3. MongoDB</h2><p>###3.1 首先在 <a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">MongoDB官网</a> 下载安装包(<code>.msi</code>)文件，然后可视化安装</p>
-<p>下载完成后双击 <code>.msi</code> 文件，按提示进行安装即可。也可以自定义安装目录等。</p>
-<h3 id="3-2-创建数据目录"><a href="#3-2-创建数据目录" class="headerlink" title="3.2 创建数据目录"></a>3.2 创建数据目录</h3><p>MongoDB 将数据目录存储在 db 目录下。但是这个数据目录不会主动创建，我们在安装完成后需要创建它。请注意，数据目录应该放在根目录下（(如： C:\ 或者 D:\ 等)。</p>
-<p>所以我选择在D盘创建data根目录，然后在data文件夹中创建 db 和 log 两个子文件夹。</p>
-<h3 id="3-3-运行-MongoDB-服务器"><a href="#3-3-运行-MongoDB-服务器" class="headerlink" title="3.3 运行 MongoDB 服务器"></a>3.3 运行 MongoDB 服务器</h3><p>命令行输入以下指令：（注意根据自己的安装目录来确定具体的指令即可）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe"</span> --dbpath d:\data\db</span><br></pre></td></tr></table></figure>
-<p><code>--dbpath</code> 指令可以指定数据的存放目录。如果执行成功，会输出以下信息：</p>
-<p>[图片]</p>
-<h3 id="3-4-连接到MongoDB"><a href="#3-4-连接到MongoDB" class="headerlink" title="3.4 连接到MongoDB"></a>3.4 连接到MongoDB</h3><p>打开另一个命令行窗口，输入以下指令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe"</span></span><br></pre></td></tr></table></figure>
-<h3 id="3-5-为-MongoDB-Community-Edition-配置-Windows-服务"><a href="#3-5-为-MongoDB-Community-Edition-配置-Windows-服务" class="headerlink" title="3.5 为 MongoDB Community Edition 配置 Windows 服务"></a>3.5 为 MongoDB Community Edition 配置 Windows 服务</h3><p>创建一个配置文件。 该文件必须设置 systemLog.path。 根据需要包含其他配置选项。例如，在 C：\ Program Files \ MongoDB \ Server \ 3.6 \ mongod.cfg 中创建一个指定 systemLog.path 和 storage.dbPath 的文件：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemLog:</span><br><span class="line">    destination: file</span><br><span class="line">    path: d:\data\log\mongod.log</span><br><span class="line">storage:</span><br><span class="line">    dbPath: d:\data\db</span><br></pre></td></tr></table></figure>
-<h3 id="3-6-安装MongoDB服务"><a href="#3-6-安装MongoDB服务" class="headerlink" title="3.6 安装MongoDB服务"></a>3.6 安装MongoDB服务</h3><p>输入命令行：(这里采用的是手动注册，其他方法在我操作的时候会失败——提示<code>creatserver 成功</code> ，但是服务不能运行)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">"c:\Program Files\MongoDB\Server\3.6\bin\mongod.exe"</span> --logpath <span class="string">"d:\data\log\mongo.log"</span> --dbpath <span class="string">"d:\data\db"</span> --install --journal</span><br></pre></td></tr></table></figure>
-<p>然后可以在 任务管理器——服务 中看到 MongoDB 这一项服务了。</p>
-<h3 id="3-7-启动MongoDB服务"><a href="#3-7-启动MongoDB服务" class="headerlink" title="3.7 启动MongoDB服务"></a>3.7 启动MongoDB服务</h3><p>命令行运行：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; net start MongoDB</span><br></pre></td></tr></table></figure>
-<p>会显示：</p>
-<p>[图片]</p>
-<p>表明服务启动成功。这时在 任务管理器——服务 中可以看到 MongoDB 的状态为：正在运行。</p>
-<h3 id="3-8-停止-MongoDB-服务"><a href="#3-8-停止-MongoDB-服务" class="headerlink" title="3.8 停止 MongoDB 服务"></a>3.8 停止 MongoDB 服务</h3><p>   命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; net stop MongoDB</span><br></pre></td></tr></table></figure>
-<p><strong>备注</strong>： 如果有任何问题，可以参考 MongoDB 官网的<a href="https://docs.mongodb.com/manual/installation/?_ga=2.203762704.1624692376.1524877159-1330067657.1524553014" target="_blank" rel="noopener">安装指导文件</a>。</p>
-<h2 id="4-RoboMongo"><a href="#4-RoboMongo" class="headerlink" title="4. RoboMongo"></a>4. RoboMongo</h2><h3 id="4-1-安装"><a href="#4-1-安装" class="headerlink" title="4.1 安装"></a>4.1 安装</h3><p>在 Robomongo 官网下载<a href="https://robomongo.org/download" target="_blank" rel="noopener">安装包</a>，然后按提示一步步安装即可。</p>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim" alt="">)</p>
-<h3 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2 使用"></a>4.2 使用</h3><ul>
-<li>打开软件，然后点击 create:</li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim" alt="">)</p>
-<ul>
-<li>更改 Name(我填写的是 test)，然后点击 Save. 会自动连接。</li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG" alt="">)</p>
-<ul>
-<li>右键 test ，点击 Create Database，输入自己想要建立的数据库名称。(我输入的是 test_1 )，然后 Create。</li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim" alt="">)</p>
-<ul>
-<li>右键 collections， creat collections(相当于建表):</li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG" alt="">)</p>
-<ul>
-<li>输入表的名称（mytest）：</li>
-</ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim" alt="">)</p>
-<h3 id="4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><a href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化" class="headerlink" title="4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"></a>4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</h3><ol>
-<li>首先定义一个 <code>MongoConn</code> 类：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># myconn.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">import</span> traceback    </span><br><span class="line"></span><br><span class="line">MONGODB_CONFIG = &#123;</span><br><span class="line">    <span class="string">'host'</span>: <span class="string">'127.0.0.1'</span>,</span><br><span class="line">    <span class="string">'port'</span>: <span class="number">27017</span>,</span><br><span class="line">    <span class="string">'db_name'</span>: <span class="string">'test_1'</span>,</span><br><span class="line">    <span class="string">'username'</span>: <span class="keyword">None</span>,</span><br><span class="line">    <span class="string">'password'</span>: <span class="keyword">None</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MongoConn</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment"># connect db</span></span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            self.conn = pymongo.MongoClient(MONGODB_CONFIG[<span class="string">'host'</span>], MONGODB_CONFIG[<span class="string">'port'</span>])</span><br><span class="line">            self.db = self.conn[MONGODB_CONFIG[<span class="string">'db_name'</span>]]  <span class="comment"># connect db</span></span><br><span class="line">            self.username=MONGODB_CONFIG[<span class="string">'username'</span>]</span><br><span class="line">            self.password=MONGODB_CONFIG[<span class="string">'password'</span>]           </span><br><span class="line">            <span class="keyword">if</span> self.username <span class="keyword">and</span> self.password:</span><br><span class="line">                self.connected = self.db.authenticate(self.username, self.password)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                self.connected = <span class="keyword">True</span></span><br><span class="line">        <span class="keyword">except</span> Exception:</span><br><span class="line">            print(traceback.format_exc())</span><br><span class="line">            print(<span class="string">'Connect Statics Database Fail.'</span>)</span><br><span class="line">            sys.exit(<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li>然后对 MongoDB 进行一些简单的操作（插入数据）</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="comment"># use_pymongo.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> myconn <span class="keyword">import</span> MongoConn</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    my_conn = MongoConn()</span><br><span class="line">    datas = [</span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">1</span>, <span class="string">'data'</span>:<span class="number">12</span>&#125;,        </span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">2</span>, <span class="string">'data'</span>:<span class="number">22</span>&#125;,</span><br><span class="line">        &#123;<span class="string">'_id'</span>:<span class="number">3</span>, <span class="string">'data'</span>:<span class="string">'cc'</span>&#125;      </span><br><span class="line">    ]  </span><br><span class="line">    <span class="comment">#插入数据，'mytest'是上文中创建的表名</span></span><br><span class="line">    my_conn.db[<span class="string">'mytest'</span>].insert(datas)</span><br><span class="line">    <span class="comment">#查询数据，'mytest'是上文中创建的表名</span></span><br><span class="line">    res=my_conn.db[<span class="string">'mytest'</span>].find(&#123;&#125;)</span><br><span class="line">    <span class="keyword">for</span> k <span class="keyword">in</span> res:</span><br><span class="line">        print(k)</span><br></pre></td></tr></table></figure>
-<ol start="3">
-<li>在命令行中运行该程序：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; python use_pymongo.py</span><br></pre></td></tr></table></figure>
-<ol start="4">
-<li>打开 Robomongo 查看情况，可以看到插入的数据值（此处为 json 格式显示，robomongo 里面有多种显示格式，点右上角按钮切换即可）。</li>
-</ol>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim" alt="">)</p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -330,106 +210,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://xiangsugar.github.io/2018/04/27/我的第一篇博客/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
   
   
-    <a href="/2018/04/26/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello World</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -452,9 +245,9 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

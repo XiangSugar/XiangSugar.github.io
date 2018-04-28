@@ -166,7 +166,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2018/04/27/我的第一篇博客/">我的第一篇博客</a>
+      <a class="article-title" href="/2018/04/27/我的第一篇博客/">无人船云服务器开发环境搭建</a>
     </h1>
   
 
@@ -179,15 +179,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>是不是随便写点东西啦</p>
-<p>我就是来搞笑的</p>
-<p>哈哈哈</p>
-<ul>
-<li>你唔好</li>
-<li>问吧</li>
-<li>案件逻辑上的</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding = utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> rsa</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(number)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> number &gt; <span class="number">0</span>:</span><br><span class="line">        print(<span class="string">"The number is a positive number."</span>)</span><br><span class="line">        </span><br><span class="line">foo(<span class="number">78</span>)</span><br></pre></td></tr></table></figure>
+        <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 <code>Python</code> 、<code>tornado</code> 进行开发的，而数据库是采用 <code>MongoDB</code>，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很好的事，此外，如有不妥的地方还请各位大佬多拍拍砖。</p>
         
           <a class="article-more-a" href="/2018/04/27/我的第一篇博客/#more">more >></a>
         
@@ -203,11 +195,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Life</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tornado</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Essays</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pymongo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Robomongo</a>
         		</li>
       		
 		</ul>
@@ -426,11 +426,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Life</a>
+                <a href="javascript:void(0)" class="js-tag color3">tornado</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Essays</a>
+                <a href="javascript:void(0)" class="js-tag color3">pymongo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">MongoDB</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Robomongo</a>
               </li>
             
             <div class="clearfix"></div>
