@@ -29,7 +29,7 @@
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim">
 <meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim">
-<meta property="og:updated_time" content="2018-04-28T05:01:45.258Z">
+<meta property="og:updated_time" content="2018-04-28T05:10:04.367Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无人船云服务器开发环境搭建">
 <meta name="twitter:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
@@ -195,8 +195,7 @@
       
         <h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 <code>Python</code> 、<code>tornado</code> 进行开发的，而数据库是采用 <code>MongoDB</code>，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很好的事，此外，如有不妥的地方还请各位大佬多拍拍砖。</p>
 <a id="more"></a>
-<h2 id="1-tornado"><a href="#1-tornado" class="headerlink" title="1. tornado"></a>1. tornado</h2><p>###1.1 安装</p>
-<p>运行命令行工具，输入指令直接安装：(前提是之前已经安装了 pip 包安装工具)</p>
+<h2 id="1-tornado"><a href="#1-tornado" class="headerlink" title="1. tornado"></a>1. tornado</h2><h3 id="1-1-安装"><a href="#1-1-安装" class="headerlink" title="1.1 安装"></a>1.1 安装</h3><p>运行命令行工具，输入指令直接安装：(前提是之前已经安装了 pip 包安装工具)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; pip install tornado</span><br></pre></td></tr></table></figure>
 <h3 id="1-2-使用（简单测试）"><a href="#1-2-使用（简单测试）" class="headerlink" title="1.2 使用（简单测试）"></a>1.2 使用（简单测试）</h3><ul>
 <li>编写一个很简单的测试代码，如下：</li>
@@ -210,8 +209,7 @@
 <li>在浏览器地址栏中输入：<a href="http://localhost:8000，查看效果（如图则表示测试成功）：" target="_blank" rel="noopener">http://localhost:8000，查看效果（如图则表示测试成功）：</a></li>
 </ul>
 <p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim" alt="mark"></p>
-<h2 id="2-pymongo"><a href="#2-pymongo" class="headerlink" title="2. pymongo"></a>2. pymongo</h2><p>###2.1 安装</p>
-<p>pymongo 其实是一个 python 的第三方模块，所以安装有两种方式</p>
+<h2 id="2-pymongo"><a href="#2-pymongo" class="headerlink" title="2. pymongo"></a>2. pymongo</h2><h3 id="2-1-安装"><a href="#2-1-安装" class="headerlink" title="2.1 安装"></a>2.1 安装</h3><p>pymongo 其实是一个 python 的第三方模块，所以安装有两种方式</p>
 <ol>
 <li><p>命令行环境中安装：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; python -m pip install pymongo</span><br></pre></td></tr></table></figure>
@@ -222,8 +220,7 @@
 </li>
 </ol>
 <h3 id="2-2-使用（简单测试）"><a href="#2-2-使用（简单测试）" class="headerlink" title="2.2 使用（简单测试）"></a>2.2 使用（简单测试）</h3><p>参见下文的 4.3 即可。</p>
-<h2 id="3-MongoDB"><a href="#3-MongoDB" class="headerlink" title="3. MongoDB"></a>3. MongoDB</h2><p>###3.1 首先在 <a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">MongoDB官网</a> 下载安装包(<code>.msi</code>)文件，然后可视化安装</p>
-<p>下载完成后双击 <code>.msi</code> 文件，按提示进行安装即可。也可以自定义安装目录等。</p>
+<h2 id="3-MongoDB"><a href="#3-MongoDB" class="headerlink" title="3. MongoDB"></a>3. MongoDB</h2><h3 id="3-1-首先在-MongoDB官网-下载安装包-msi-文件，然后可视化安装"><a href="#3-1-首先在-MongoDB官网-下载安装包-msi-文件，然后可视化安装" class="headerlink" title="3.1 首先在 MongoDB官网 下载安装包(.msi)文件，然后可视化安装"></a>3.1 首先在 <a href="https://www.mongodb.com/download-center?jmp=nav#community" target="_blank" rel="noopener">MongoDB官网</a> 下载安装包(<code>.msi</code>)文件，然后可视化安装</h3><p>下载完成后双击 <code>.msi</code> 文件，按提示进行安装即可。也可以自定义安装目录等。</p>
 <h3 id="3-2-创建数据目录"><a href="#3-2-创建数据目录" class="headerlink" title="3.2 创建数据目录"></a>3.2 创建数据目录</h3><p>MongoDB 将数据目录存储在 db 目录下。但是这个数据目录不会主动创建，我们在安装完成后需要创建它。请注意，数据目录应该放在根目录下（(如： C:\ 或者 D:\ 等)。</p>
 <p>所以我选择在D盘创建data根目录，然后在data文件夹中创建 db 和 log 两个子文件夹。</p>
 <h3 id="3-3-运行-MongoDB-服务器"><a href="#3-3-运行-MongoDB-服务器" class="headerlink" title="3.3 运行 MongoDB 服务器"></a>3.3 运行 MongoDB 服务器</h3><p>命令行输入以下指令：（注意根据自己的安装目录来确定具体的指令即可）</p>
@@ -264,8 +261,9 @@
 </ul>
 <p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim" alt="mark"></p>
 <ul>
-<li>右键 collections， creat collections(相当于建表):</li>
-<li><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG" alt="mark"></li>
+<li><p>右键 collections， creat collections(相当于建表):</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG" alt="mark"></p>
+</li>
 </ul>
 <ul>
 <li>输入表的名称（mytest）：</li>
@@ -432,7 +430,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-tornado"><span class="toc-number">2.</span> <span class="toc-text">1. tornado</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-使用（简单测试）"><span class="toc-number">2.1.</span> <span class="toc-text">1.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pymongo"><span class="toc-number">3.</span> <span class="toc-text">2. pymongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-使用（简单测试）"><span class="toc-number">3.1.</span> <span class="toc-text">2.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-MongoDB"><span class="toc-number">4.</span> <span class="toc-text">3. MongoDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-创建数据目录"><span class="toc-number">4.1.</span> <span class="toc-text">3.2 创建数据目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-运行-MongoDB-服务器"><span class="toc-number">4.2.</span> <span class="toc-text">3.3 运行 MongoDB 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-连接到MongoDB"><span class="toc-number">4.3.</span> <span class="toc-text">3.4 连接到MongoDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-为-MongoDB-Community-Edition-配置-Windows-服务"><span class="toc-number">4.4.</span> <span class="toc-text">3.5 为 MongoDB Community Edition 配置 Windows 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-安装MongoDB服务"><span class="toc-number">4.5.</span> <span class="toc-text">3.6 安装MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-启动MongoDB服务"><span class="toc-number">4.6.</span> <span class="toc-text">3.7 启动MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-停止-MongoDB-服务"><span class="toc-number">4.7.</span> <span class="toc-text">3.8 停止 MongoDB 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-RoboMongo"><span class="toc-number">5.</span> <span class="toc-text">4. RoboMongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-安装"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-使用"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-tornado"><span class="toc-number">2.</span> <span class="toc-text">1. tornado</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-安装"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-使用（简单测试）"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pymongo"><span class="toc-number">3.</span> <span class="toc-text">2. pymongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-安装"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-使用（简单测试）"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-MongoDB"><span class="toc-number">4.</span> <span class="toc-text">3. MongoDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-首先在-MongoDB官网-下载安装包-msi-文件，然后可视化安装"><span class="toc-number">4.1.</span> <span class="toc-text">3.1 首先在 MongoDB官网 下载安装包(.msi)文件，然后可视化安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-创建数据目录"><span class="toc-number">4.2.</span> <span class="toc-text">3.2 创建数据目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-运行-MongoDB-服务器"><span class="toc-number">4.3.</span> <span class="toc-text">3.3 运行 MongoDB 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-连接到MongoDB"><span class="toc-number">4.4.</span> <span class="toc-text">3.4 连接到MongoDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-为-MongoDB-Community-Edition-配置-Windows-服务"><span class="toc-number">4.5.</span> <span class="toc-text">3.5 为 MongoDB Community Edition 配置 Windows 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-安装MongoDB服务"><span class="toc-number">4.6.</span> <span class="toc-text">3.6 安装MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-启动MongoDB服务"><span class="toc-number">4.7.</span> <span class="toc-text">3.7 启动MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-停止-MongoDB-服务"><span class="toc-number">4.8.</span> <span class="toc-text">3.8 停止 MongoDB 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-RoboMongo"><span class="toc-number">5.</span> <span class="toc-text">4. RoboMongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-安装"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-使用"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
