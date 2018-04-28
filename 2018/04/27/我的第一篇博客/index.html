@@ -16,19 +16,24 @@
 <meta property="og:site_name" content="Sugar">
 <meta property="og:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim">
-<meta property="og:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim">
-<meta property="og:updated_time" content="2018-04-28T04:39:26.130Z">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/H6KKEiEj1L.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/HgHaAJec18.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/d0A5Aa2c7K.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/Ih8EcmLjIE.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/C5adg8fam4.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim">
+<meta property="og:updated_time" content="2018-04-28T05:01:45.258Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="无人船云服务器开发环境搭建">
 <meta name="twitter:description" content="前言：从实验室师兄那儿接手了无人船项目的相关软件，其中云服务器这一块是利用 Python 、tornado 进行开发的，而数据库是采用 MongoDB，开发环境的搭建里面会涉及到这些软件、模块的安装和配置，虽然网上都有比较详细的教程，不过可能每个人都会遇到一些小问题，我自己也踩了不少的坑才将这一套全部搞定的。所以简单将这些操作写出来，以供实验室需要的人参考，同时如果能帮助到其他需要的人那也是一件很">
-<meta name="twitter:image" content="https://xiangsugar.github.io/2018/04/27/我的第一篇博客/![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
+<meta name="twitter:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim">
   
     <link rel="alternative" href="/atom.xml" title="Sugar" type="application/atom+xml">
   
@@ -204,7 +209,7 @@
 <ul>
 <li>在浏览器地址栏中输入：<a href="http://localhost:8000，查看效果（如图则表示测试成功）：" target="_blank" rel="noopener">http://localhost:8000，查看效果（如图则表示测试成功）：</a></li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1fBi69GbFm.png?imageslim" alt="mark"></p>
 <h2 id="2-pymongo"><a href="#2-pymongo" class="headerlink" title="2. pymongo"></a>2. pymongo</h2><p>###2.1 安装</p>
 <p>pymongo 其实是一个 python 的第三方模块，所以安装有两种方式</p>
 <ol>
@@ -224,44 +229,48 @@
 <h3 id="3-3-运行-MongoDB-服务器"><a href="#3-3-运行-MongoDB-服务器" class="headerlink" title="3.3 运行 MongoDB 服务器"></a>3.3 运行 MongoDB 服务器</h3><p>命令行输入以下指令：（注意根据自己的安装目录来确定具体的指令即可）</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">"C:\Program Files\MongoDB\Server\3.6\bin\mongod.exe"</span> --dbpath d:\data\db</span><br></pre></td></tr></table></figure>
 <p><code>--dbpath</code> 指令可以指定数据的存放目录。如果执行成功，会输出以下信息：</p>
-<p>[图片]</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/H6KKEiEj1L.png?imageslim" alt="mark"></p>
 <h3 id="3-4-连接到MongoDB"><a href="#3-4-连接到MongoDB" class="headerlink" title="3.4 连接到MongoDB"></a>3.4 连接到MongoDB</h3><p>打开另一个命令行窗口，输入以下指令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"C:\Program Files\MongoDB\Server\3.6\bin\mongo.exe"</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-5-为-MongoDB-Community-Edition-配置-Windows-服务"><a href="#3-5-为-MongoDB-Community-Edition-配置-Windows-服务" class="headerlink" title="3.5 为 MongoDB Community Edition 配置 Windows 服务"></a>3.5 为 MongoDB Community Edition 配置 Windows 服务</h3><p>创建一个配置文件。 该文件必须设置 systemLog.path。 根据需要包含其他配置选项。例如，在 C：\ Program Files \ MongoDB \ Server \ 3.6 \ mongod.cfg 中创建一个指定 systemLog.path 和 storage.dbPath 的文件：</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">systemLog:</span><br><span class="line">    destination: file</span><br><span class="line">    path: d:\data\log\mongod.log</span><br><span class="line">storage:</span><br><span class="line">    dbPath: d:\data\db</span><br></pre></td></tr></table></figure>
 <h3 id="3-6-安装MongoDB服务"><a href="#3-6-安装MongoDB服务" class="headerlink" title="3.6 安装MongoDB服务"></a>3.6 安装MongoDB服务</h3><p>输入命令行：(这里采用的是手动注册，其他方法在我操作的时候会失败——提示<code>creatserver 成功</code> ，但是服务不能运行)</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; <span class="string">"c:\Program Files\MongoDB\Server\3.6\bin\mongod.exe"</span> --logpath <span class="string">"d:\data\log\mongo.log"</span> --dbpath <span class="string">"d:\data\db"</span> --install --journal</span><br></pre></td></tr></table></figure>
-<p>然后可以在 任务管理器——服务 中看到 MongoDB 这一项服务了。</p>
+<p>然后可以在 服务 中看到 MongoDB 这一项服务了。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/HgHaAJec18.png?imageslim" alt="mark"></p>
 <h3 id="3-7-启动MongoDB服务"><a href="#3-7-启动MongoDB服务" class="headerlink" title="3.7 启动MongoDB服务"></a>3.7 启动MongoDB服务</h3><p>命令行运行：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; net start MongoDB</span><br></pre></td></tr></table></figure>
 <p>会显示：</p>
-<p>[图片]</p>
-<p>表明服务启动成功。这时在 任务管理器——服务 中可以看到 MongoDB 的状态为：正在运行。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/d0A5Aa2c7K.png?imageslim" alt="mark"></p>
+<p>表明服务启动成功。这时在 服务 中可以看到 MongoDB 的状态为：正在运行。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/Ih8EcmLjIE.png?imageslim" alt="mark"></p>
 <h3 id="3-8-停止-MongoDB-服务"><a href="#3-8-停止-MongoDB-服务" class="headerlink" title="3.8 停止 MongoDB 服务"></a>3.8 停止 MongoDB 服务</h3><p>   命令行输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; net stop MongoDB</span><br></pre></td></tr></table></figure>
+<p>显示：</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/C5adg8fam4.png?imageslim" alt="mark"></p>
 <p><strong>备注</strong>： 如果有任何问题，可以参考 MongoDB 官网的<a href="https://docs.mongodb.com/manual/installation/?_ga=2.203762704.1624692376.1524877159-1330067657.1524553014" target="_blank" rel="noopener">安装指导文件</a>。</p>
 <h2 id="4-RoboMongo"><a href="#4-RoboMongo" class="headerlink" title="4. RoboMongo"></a>4. RoboMongo</h2><h3 id="4-1-安装"><a href="#4-1-安装" class="headerlink" title="4.1 安装"></a>4.1 安装</h3><p>在 Robomongo 官网下载<a href="https://robomongo.org/download" target="_blank" rel="noopener">安装包</a>，然后按提示一步步安装即可。</p>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/CeJJa00eb7.png?imageslim" alt="mark"></p>
 <h3 id="4-2-使用"><a href="#4-2-使用" class="headerlink" title="4.2 使用"></a>4.2 使用</h3><ul>
 <li>打开软件，然后点击 create:</li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4el7hA11EL.png?imageslim" alt="mark"></p>
 <ul>
 <li>更改 Name(我填写的是 test)，然后点击 Save. 会自动连接。</li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/1D5CFmafIF.PNG" alt="mark"></p>
 <ul>
 <li>右键 test ，点击 Create Database，输入自己想要建立的数据库名称。(我输入的是 test_1 )，然后 Create。</li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/mJbaAl60DI.png?imageslim" alt="mark"></p>
 <ul>
 <li>右键 collections， creat collections(相当于建表):</li>
+<li><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG" alt="mark"></li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/kmBIdbgIEf.PNG" alt="">)</p>
 <ul>
 <li>输入表的名称（mytest）：</li>
 </ul>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim" alt="">)</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/efgLL2iDJc.png?imageslim" alt="mark"></p>
 <h3 id="4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><a href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化" class="headerlink" title="4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"></a>4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</h3><ol>
 <li>首先定义一个 <code>MongoConn</code> 类：</li>
 </ol>
@@ -277,7 +286,7 @@
 <ol start="4">
 <li>打开 Robomongo 查看情况，可以看到插入的数据值（此处为 json 格式显示，robomongo 里面有多种显示格式，点右上角按钮切换即可）。</li>
 </ol>
-<p><img src="![mark](http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim" alt="">)</p>
+<p>!<img src="http://p7vojdb7r.bkt.clouddn.com/blog/180428/4i13b5D61F.png?imageslim" alt="mark"></p>
 
       
 
@@ -415,6 +424,19 @@
             </div>
         </div>
         
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言："><span class="toc-number">1.</span> <span class="toc-text">前言：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-tornado"><span class="toc-number">2.</span> <span class="toc-text">1. tornado</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-使用（简单测试）"><span class="toc-number">2.1.</span> <span class="toc-text">1.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-pymongo"><span class="toc-number">3.</span> <span class="toc-text">2. pymongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-使用（简单测试）"><span class="toc-number">3.1.</span> <span class="toc-text">2.2 使用（简单测试）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-MongoDB"><span class="toc-number">4.</span> <span class="toc-text">3. MongoDB</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-创建数据目录"><span class="toc-number">4.1.</span> <span class="toc-text">3.2 创建数据目录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-运行-MongoDB-服务器"><span class="toc-number">4.2.</span> <span class="toc-text">3.3 运行 MongoDB 服务器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-连接到MongoDB"><span class="toc-number">4.3.</span> <span class="toc-text">3.4 连接到MongoDB</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-为-MongoDB-Community-Edition-配置-Windows-服务"><span class="toc-number">4.4.</span> <span class="toc-text">3.5 为 MongoDB Community Edition 配置 Windows 服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-安装MongoDB服务"><span class="toc-number">4.5.</span> <span class="toc-text">3.6 安装MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-启动MongoDB服务"><span class="toc-number">4.6.</span> <span class="toc-text">3.7 启动MongoDB服务</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-停止-MongoDB-服务"><span class="toc-number">4.7.</span> <span class="toc-text">3.8 停止 MongoDB 服务</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-RoboMongo"><span class="toc-number">5.</span> <span class="toc-text">4. RoboMongo</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-安装"><span class="toc-number">5.1.</span> <span class="toc-text">4.1 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-使用"><span class="toc-number">5.2.</span> <span class="toc-text">4.2 使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化"><span class="toc-number">5.3.</span> <span class="toc-text">4.3 使用pymongo对MongoDB进行操作，并在Robomongo上面查看变化</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
         
     </div>
 </aside>
@@ -638,7 +660,7 @@ MathJax.Hub.Queue(function() {
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">华科14级&lt;br&gt;佛系青年一枚，大家多多指教！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">小白一枚&lt;br&gt;大家多多指教！</div>
   	  	
     	</section>
     
