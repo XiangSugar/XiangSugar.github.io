@@ -6,18 +6,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://xiangsugar.github.io">
-  <title>Archives: 2018 | Sugar</title>
+  <title>MongoDB不同服务器之间的数据迁移 | Sugar</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I was young until I wasn&apos;t.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Sugar">
-<meta property="og:url" content="https://xiangsugar.github.io/archives/2018/index.html">
+  <meta name="description" content="前言最近由于前一台服务器的身份期限 (学生身份认证) 已经快要到期了，所以需要将改服务器上MongoDB数据库中的所有数据进行迁移。其实针对这一点，有不止一种解决思路。比如：  把数据备份到服务器本地—&amp;gt;通过命令下载到本机—&amp;gt;将下载下来的数据恢复/（迁移）至目的服务器 把数据备份到服务器本地—&amp;gt;通过命令直接恢复/（迁移）至目的服务器  这里我选择的是第二种方案。而且由于对于 Li">
+<meta name="keywords" content="MongoDB，Linux，PuTTY">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MongoDB不同服务器之间的数据迁移">
+<meta property="og:url" content="https://xiangsugar.github.io/2018/06/24/MongoDB不同服务器之间的数据迁移/index.html">
 <meta property="og:site_name" content="Sugar">
-<meta property="og:description" content="I was young until I wasn&apos;t.">
+<meta property="og:description" content="前言最近由于前一台服务器的身份期限 (学生身份认证) 已经快要到期了，所以需要将改服务器上MongoDB数据库中的所有数据进行迁移。其实针对这一点，有不止一种解决思路。比如：  把数据备份到服务器本地—&amp;gt;通过命令下载到本机—&amp;gt;将下载下来的数据恢复/（迁移）至目的服务器 把数据备份到服务器本地—&amp;gt;通过命令直接恢复/（迁移）至目的服务器  这里我选择的是第二种方案。而且由于对于 Li">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180624/8JaB86hCD0.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180624/454887lmJi.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180624/J471mH3m2h.png?imageslim">
+<meta property="og:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180624/cbi7eEf6KK.png?imageslim">
+<meta property="og:updated_time" content="2018-06-24T13:29:57.447Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Sugar">
-<meta name="twitter:description" content="I was young until I wasn&apos;t.">
+<meta name="twitter:title" content="MongoDB不同服务器之间的数据迁移">
+<meta name="twitter:description" content="前言最近由于前一台服务器的身份期限 (学生身份认证) 已经快要到期了，所以需要将改服务器上MongoDB数据库中的所有数据进行迁移。其实针对这一点，有不止一种解决思路。比如：  把数据备份到服务器本地—&amp;gt;通过命令下载到本机—&amp;gt;将下载下来的数据恢复/（迁移）至目的服务器 把数据备份到服务器本地—&amp;gt;通过命令直接恢复/（迁移）至目的服务器  这里我选择的是第二种方案。而且由于对于 Li">
+<meta name="twitter:image" content="http://p7vojdb7r.bkt.clouddn.com/blog/180624/8JaB86hCD0.png?imageslim">
   
     <link rel="alternative" href="/atom.xml" title="Sugar" type="application/atom+xml">
   
@@ -157,36 +164,154 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-MongoDB不同服务器之间的数据迁移" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/24/MongoDB不同服务器之间的数据迁移/" class="archive-article-date">
-  	<time datetime="2018-06-24T08:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/24/MongoDB不同服务器之间的数据迁移/">MongoDB不同服务器之间的数据迁移</a>
+    <h1 class="article-title" itemprop="name">
+      MongoDB不同服务器之间的数据迁移
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/06/24/MongoDB不同服务器之间的数据迁移/" class="archive-article-date">
+  	<time datetime="2018-06-24T08:00:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>最近由于前一台服务器的身份期限 (学生身份认证) 已经快要到期了，所以需要将改服务器上MongoDB数据库中的所有数据进行迁移。其实针对这一点，有不止一种解决思路。比如：</p>
+<ul>
+<li>把数据备份到服务器本地—&gt;通过命令下载到本机—&gt;将下载下来的数据恢复/（迁移）至目的服务器</li>
+<li>把数据备份到服务器本地—&gt;通过命令直接恢复/（迁移）至目的服务器</li>
+</ul>
+<p>这里我选择的是第二种方案。而且由于对于 <code>Linux</code> 不是很熟悉，所有我首先在自己电脑的虚拟机上面模拟了一次这个过程，在成功之后才正式对需要的数据进行迁移。</p>
+<a id="more"></a>
+<h2 id="1-本地模拟"><a href="#1-本地模拟" class="headerlink" title="1 本地模拟"></a>1 本地模拟</h2><h3 id="1-1-运行环境搭建"><a href="#1-1-运行环境搭建" class="headerlink" title="1.1 运行环境搭建"></a>1.1 运行环境搭建</h3><p>本地模拟的过程首先需要搭建无人船服务器程序运行的所有环境，所以这就相当于实际自己把该过程操作了一遍，这也正好是之前有安排过的工作。其大致过程与之前写的<a href="https://xiangsugar.github.io/2018/04/27/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/">无人船云服务器开发环境搭建</a> 的内容基本一致，只是在 <code>Linux</code> 上面有一些小差别，而且一般只能通过命令行来操作。不过网上教程很多，可以解决。</p>
+<h3 id="1-2-备份数据"><a href="#1-2-备份数据" class="headerlink" title="1.2 备份数据"></a>1.2 备份数据</h3><p>在 Mongodb 中我们使用 <code>mongodump</code>  命令来备份 MongoDB 数据。该命令可以导出所有数据到指定目录中。<code>mongodump</code>  命令可以通过参数指定导出的数据量以及转存的服务器。</p>
+<p><code>mongodump</code> 命令脚本语法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongodump -h dbhost -d dbname -o dbdirectory</span><br></pre></td></tr></table></figure>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><p>-h：</p>
+<p>MongoDB 所在服务器地址，例如：127.0.0.1，当然也可以指定端口号：127.0.0.1:27017</p>
+</li>
+<li><p>-d：</p>
+<p>需要备份的数据库实例，例如：test</p>
+</li>
+<li><p>-o：</p>
+<p>备份的数据存放位置（自己决定备份在何处），例如：c:\data\dump，当然该目录需要提前建立，在备份完成后，系统自动在 dump 目录下建立一个 test 目录，这个目录里面存放该数据库实例的备份数据。</p>
+</li>
+</ul>
+<p><strong>模拟实例：</strong></p>
+<p>首先需要进入MongoDB安装目录的 bin 目录下，然后运行如下命令。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongodump -h localhost:27017 -d <span class="built_in">test</span> -o /var/backups/mongobackups/<span class="string">'date+"%m-%d-%y"'</span></span><br></pre></td></tr></table></figure>
+<p>之后等待备份完成。完成后可以在备份目录下找到一个以时间命名的文件（如：06-20-18），该文件就是备份数据的存储文件。</p>
+<p>mongodump 命令可选参数列表如下所示：</p>
+<table>
+<thead>
+<tr>
+<th>语法</th>
+<th>描述</th>
+<th style="text-align:center">实例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mongodump –host HOST_NAME –port PORT_NUMBER</td>
+<td>该命令将备份所有 MongoDB 数据</td>
+<td style="text-align:center">mongodump –host runoob.com –port 27017</td>
+</tr>
+<tr>
+<td>mongodump –dbpath DB_PATH –out BACKUP_DIRECTORY</td>
+<td></td>
+<td style="text-align:center">mongodump –dbpath /data/db/ –out /data/backup/</td>
+</tr>
+<tr>
+<td>mongodump –collection COLLECTION –db DB_NAME</td>
+<td>该命令将备份指定数据库的集合。</td>
+<td style="text-align:center">mongodump –collection mycol –db test</td>
+</tr>
+</tbody>
+</table>
+<h3 id="1-3-还原数据"><a href="#1-3-还原数据" class="headerlink" title="1.3 还原数据"></a>1.3 还原数据</h3><p>mongodb 使用 <code>mongorestore</code> 命令来恢复备份的数据。</p>
+<p><code>mongorestore</code> 命令脚本语法如下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongorestore -h &lt;hostname&gt;&lt;:port&gt; -d dbname &lt;path&gt;</span><br></pre></td></tr></table></figure>
+<p><strong>参数说明：</strong></p>
+<ul>
+<li><p>–host &lt;:port&gt;, -h &lt;:port&gt;：</p>
+<p>MongoDB 所在的目的服务器地址（既可以在本地还原，也可以还原到任意的目的服务器），默认为： localhost:27017</p>
+</li>
+<li><p>–db , -d ：</p>
+<p>需要恢复的数据库实例，例如：test，当然这个名称也可以和备份时候的不一样，比如 test2</p>
+</li>
+<li><p>–drop：</p>
+<p>恢复的时候，先删除当前数据，然后恢复备份的数据。就是说，恢复后，备份后添加修改的数据都会被删除，慎用哦！</p>
+</li>
+<li><p><path></path>：</p>
+<p><code>mongorestore</code> 最后的一个参数，设置备份数据所在位置，例如：c:\data\dump\test。</p>
+<p>你不能同时指定 <path></path> 和 –dir 选项，–dir 也可以设置备份目录。</p>
+</li>
+<li><p>–dir：</p>
+<p>指定备份的目录</p>
+<p>你不能同时指定 <path></path> 和 –dir 选项。</p>
+</li>
+</ul>
+<p><strong>模拟实例：</strong></p>
+<p>接下来我们执行以下命令:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongorestore -h 111.231.84.43:27017 -d <span class="built_in">test</span> /var/backups/mongobackups/06-20-18 --drop</span><br></pre></td></tr></table></figure>
+<p>等待数据还原结束。然后我们利用 <code>Robo 3T</code> 连接目的服务器的数据库并查看迁移的情况。如下图所示：</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180624/8JaB86hCD0.png?imageslim" alt="mark"></p>
+<p>表明已经成功迁移了数据。</p>
+<h2 id="2-实际操作"><a href="#2-实际操作" class="headerlink" title="2 实际操作"></a>2 实际操作</h2><h3 id="2-1-PuTTY的使用"><a href="#2-1-PuTTY的使用" class="headerlink" title="2.1 PuTTY的使用"></a>2.1 PuTTY的使用</h3><p>我通过 PuTTY 远程连接服务器。下载该软件，然后运行。输入目的 IP 和端口（默认为22），然后点击 打开即可。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180624/454887lmJi.png?imageslim" alt="mark"></p>
+<p>接着会出现交互窗口，输入用户名和密码登陆即可。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180624/J471mH3m2h.png?imageslim" alt="mark"></p>
+<p>登陆之后就可以正式操作了。</p>
+<h3 id="2-2-备份"><a href="#2-2-备份" class="headerlink" title="2.2 备份"></a>2.2 备份</h3><p>首先创建备份文件夹：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir /var/backups/mongobackups</span><br></pre></td></tr></table></figure>
+<p>然后找到MongoDB的安装目录，这里是 <code>/mongodb/bin</code> 。此时我们将所有的数据库信息都进行备份，则相应的命令为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongodump -h localhost:27123 -o /var/backups/mongobackups/<span class="string">'date+"%m-%d-%y"'</span></span><br></pre></td></tr></table></figure>
+<p>然后等待备份完成。由于数据量比较大，这个过程需要一定的时间，同时也取决于网络情况是否良好。</p>
+<h3 id="2-3-还原（迁移）"><a href="#2-3-还原（迁移）" class="headerlink" title="2.3 还原（迁移）"></a>2.3 还原（迁移）</h3><p>跟上面一样，用一下命令进行迁移：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mongorestore -h 111.231.84.43:27017 /var/backups/mongobackups/06-20/18 --drop</span><br></pre></td></tr></table></figure>
+<p>然后等待迁移完成即可。</p>
+<p>最后可以通过 <code>Robo 3T</code> 查看目标服务器上是否有迁移过去的数据。</p>
+<p><img src="http://p7vojdb7r.bkt.clouddn.com/blog/180624/cbi7eEf6KK.png?imageslim" alt="mark"></p>
+<p>这样就大功告成了！</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -198,188 +323,119 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://xiangsugar.github.io/2018/06/24/MongoDB不同服务器之间的数据迁移/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/05/DigitalOcean+Shadowsocks+VPS搭建-Win+android全自动科学上网方案/" class="archive-article-date">
-  	<time datetime="2018-06-05T12:31:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/06/05/DigitalOcean+Shadowsocks+VPS搭建-Win+android全自动科学上网方案/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">DigitalOcean+Shadowsocks VPS搭建|Win+android全自动科学上网方案</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/05/DigitalOcean+Shadowsocks+VPS搭建-Win+android全自动科学上网方案/">DigitalOcean+Shadowsocks VPS搭建|Win+android全自动科学上网方案</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">DigitalOcean, Shadowsocks, 科学上网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-本地模拟"><span class="toc-number">2.</span> <span class="toc-text">1 本地模拟</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-运行环境搭建"><span class="toc-number">2.1.</span> <span class="toc-text">1.1 运行环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-备份数据"><span class="toc-number">2.2.</span> <span class="toc-text">1.2 备份数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-还原数据"><span class="toc-number">2.3.</span> <span class="toc-text">1.3 还原数据</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-实际操作"><span class="toc-number">3.</span> <span class="toc-text">2 实际操作</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-PuTTY的使用"><span class="toc-number">3.1.</span> <span class="toc-text">2.1 PuTTY的使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-备份"><span class="toc-number">3.2.</span> <span class="toc-text">2.2 备份</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-还原（迁移）"><span class="toc-number">3.3.</span> <span class="toc-text">2.3 还原（迁移）</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/28/利用-Hexo-搭建-Github-静态博客/" class="archive-article-date">
-  	<time datetime="2018-04-28T09:21:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-28</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/28/利用-Hexo-搭建-Github-静态博客/">利用 Hexo 搭建 Github 静态博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">github</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">yilia</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">博客搭建</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/27/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2018-04-27T06:25:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/27/我的第一篇博客/">无人船云服务器开发环境搭建</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">tornado</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">pymongo</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">MongoDB</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Robomongo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/26/hello-world/" class="archive-article-date">
-  	<time datetime="2018-04-26T12:41:34.919Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-26</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/26/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -402,8 +458,8 @@
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
